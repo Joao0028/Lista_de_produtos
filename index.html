@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar lista de itens</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script src="JS/main.js" defer></script>
+
+</head>
+<body>
+
+        <h1 class="titulo">Lista de itens</h1>
+
+    <main class="conteudo">
+
+        <div class="principal">
+            
+            <form action="" class="adicionar" id="novoItem">
+                <label for="item">Nome do produto</label>
+                <input type="text" name="nome" id="nome" required placeholder="Nome">
+                <label for="item">Quantidade de produtos</label>
+                <input type="number" name="quantidade" class="quantidade quantia"  required placeholder="Quantidade">
+
+                <label for="item">Valor de cada unidade</label>
+                <input type="number" name="valor" class="valor" step="0.01" required placeholder="Valor R$">
+
+                
+                <input  type="submit" value="Adicionar" class="cadastrar">
+                
+            </form>
+
+            <div class="F-Fim">
+                <button class="apagar" onclick="reiniciar()">Reiniciar</button>
+                <button class="calcular" onclick="calcular()">Total</button>
+            </div>
+        </div>
+        
+    
+
+        <ul class="lista">
+        </ul>
+    </main>
+    
+    <footer style="color: white; text-align: center;">
+        
+</body>
+</html>

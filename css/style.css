@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Quicksand:wght@300;400&family=Shadows+Into+Light&display=swap');
+
+body {
+    background: linear-gradient(to right,#4992e3 0%, #C5965F 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    text-align: center;
+}
+
+.principal {
+    flex-grow: 1;
+    flex-basis: auto;
+    width: 60%;
+    padding: 2em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+}
+  
+.titulo{
+    text-align: center;
+    color: white;
+    font-weight: 100;
+}
+  
+
+.adicionar {
+    width: 100%;
+}
+
+.adicionar input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5em 0 1em;
+    padding: 1em 0.5em;
+    border-radius: 10px;
+
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.adicionar label {
+    display: block;
+}
+
+.cadastrar {
+    background:  #4992e3;
+    color: white;
+    cursor: pointer;
+}
+
+
+.F-Fim{
+    display: flex;
+    justify-content: space-between;
+}
+.apagar{
+    text-align: center;
+    width: 49%;
+    padding: 1em;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #4992e3;
+    color: white;
+}
+.calcular{
+    text-align: center;
+    width: 49%;
+    padding: 1em;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #4992e3;
+    color: white;
+}
+
+.lista {
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    list-style: none;
+    padding: 0.6em 2em;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 0 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+.item strong {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #FFFFFF;
+    Background: #C5965F;
+    font-weight: 400;
+}
+
+.item strong{
+        background-position: right center;
+        background-size: 200% auto;
+        -webkit-animation: pulse 2s infinite;
+        animation: pulse512 1.5s infinite;
+       }
+
+.adicionar input:hover, .cadastrar:active , .apagar:hover , .calcular:hover{
+    background-position: right center;
+        background-size: 200% auto;
+        -webkit-animation: pulse 2s infinite;
+        animation: pulseBlue 1.5s infinite;
+}
+
+.demora{
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: demoraParaSair 3s infinite;
+    
+}
+#nome{
+    font-weight: bold;
+    border: 1px solid #4992e3;
+}
+
+#nome:focus{
+    background: rgba(109, 108, 108, 0.75);
+}
+.quantia{
+    border: 1px solid #C5965F;
+    color: #C5965F;
+    font-weight: bold;
+}
+.quantia:focus{
+    background: #C5965F;
+    color: white;
+    font-weight: bold;
+}
+
+.valor{
+    background: white;
+    color: green;
+    border: 1px solid green;
+    font-weight: bold;
+}
+.valor:focus{
+    font-weight: bold;
+    background-color: rgba(0, 128, 0, 0.426);
+    color: white;
+}
+
+.gren{
+    color: green;
+}
+.valorDoItem{
+    font-weight: bold;
+    color: green;
+}
+
+
+
+@keyframes demoraParaSair{
+    0% {
+        box-shadow: 0 0 0 0 red;
+        
+       }
+
+       70% {
+        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+       }
+      
+       100% {
+        box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+        background-color: rgba(255, 0, 0, 0.244);
+
+       }
+}
+
+.principal:hover{
+    animation: pulse512 5s;
+}
+
+li:hover{
+    animation: pulse512 2s;
+}
+
+
+@keyframes pulse512 {
+
+        0% {
+         box-shadow: 0 0 0 0 #4992e3;
+        }
+       
+        70% {
+         box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+        }
+       
+        100% {
+         box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+        }
+        
+}
+@keyframes pulseBlue {
+
+        0% {
+         box-shadow: 0 0 0 0 #033977;
+        }
+       
+        70% {
+         box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+        }
+       
+        100% {
+         box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+        }
+        
+}
+
+
+@media (max-width: 1000px) {
+    .principal, .lista{
+        width: 90%;
+    }
+    .item{  
+        font-size: 18px;
+        }
+}
+@media (max-width: 600px) {
+    .titulo{
+        font-size: 22px;
+    }
+    .item{  
+    font-size: 14px;
+    }
+}
+@media (max-width: 380px){
+    .item{  
+        font-size: 10px;
+        }
+}
+
